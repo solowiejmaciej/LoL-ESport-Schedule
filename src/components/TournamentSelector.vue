@@ -29,7 +29,9 @@
     </div>
   </div>
   <div class="flex items-center space-x-2">
-    <span class="text-lg font-bold text-white bg-slate-800 px-2 py-1 rounded ml-2">
+    <span
+      class="text-lg font-bold text-white bg-slate-800 px-2 py-1 rounded ml-2"
+    >
       {{ formattedTournamentName }}
     </span>
   </div>

@@ -1,11 +1,30 @@
 <template>
-  <div>history!</div>
+  <div class="flex justify-center w-full pt-10">
+    <div class="text-center">
+      <span
+        class="font-bold text-white bg-slate-800 p-4 rounded-lg text-center text-4xl"
+      >
+        Upcoming matches
+      </span>
+      <div class="flex flex-col items-center justify-center space-y-4 mt-4">
+        <Match
+          v-for="match in unstartedMatches"
+          :key="match.id"
+          :event="match"
+        />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
 import { scheduleService } from "../services/ScheduleService.js";
+import Match from "../components/Match.vue";
 
 export default {
+  components: {
+    Match,
+  },
   name: "HistoryView",
   props: {
     leagueId: {
